@@ -49,7 +49,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable5",
+						"referenceName": "AzureSqlTable6",
 						"type": "DatasetReference"
 					}
 				]
