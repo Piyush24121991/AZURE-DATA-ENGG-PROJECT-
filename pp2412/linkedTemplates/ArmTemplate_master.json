@@ -1,0 +1,194 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "pp2412"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"HttpServertostorage_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HttpServertostorage'"
+		},
+		"localfiles_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'localfiles'"
+		},
+		"storage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'storage'"
+		},
+		"urltostorage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'urltostorage'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "piyushsql.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "piyushsql"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "piyush"
+		},
+		"HttpServertostorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/Piyush24121991/AZURE-DATA-ENGG-PROJECT-/"
+		},
+		"HttpServertostorage_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Piyush24121991"
+		},
+		"localfiles_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Program Files\\data store"
+		},
+		"localfiles_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "Piyush Pawar"
+		},
+		"storage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://piyushstorage.dfs.core.windows.net/"
+		},
+		"urltostorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://piyushstorage.dfs.core.windows.net/"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "pp2412_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"HttpServertostorage_password": {
+						"value": "[parameters('HttpServertostorage_password')]"
+					},
+					"storage_accountKey": {
+						"value": "[parameters('storage_accountKey')]"
+					},
+					"urltostorage_accountKey": {
+						"value": "[parameters('urltostorage_accountKey')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"HttpServertostorage_properties_typeProperties_url": {
+						"value": "[parameters('HttpServertostorage_properties_typeProperties_url')]"
+					},
+					"HttpServertostorage_properties_typeProperties_userName": {
+						"value": "[parameters('HttpServertostorage_properties_typeProperties_userName')]"
+					},
+					"storage_properties_typeProperties_url": {
+						"value": "[parameters('storage_properties_typeProperties_url')]"
+					},
+					"urltostorage_properties_typeProperties_url": {
+						"value": "[parameters('urltostorage_properties_typeProperties_url')]"
+					},
+					"trigger1_properties_typeProperties_scope": {
+						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "pp2412_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"localfiles_password": {
+						"value": "[parameters('localfiles_password')]"
+					},
+					"localfiles_properties_typeProperties_host": {
+						"value": "[parameters('localfiles_properties_typeProperties_host')]"
+					},
+					"localfiles_properties_typeProperties_userId": {
+						"value": "[parameters('localfiles_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'pp2412_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "pp2412_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"trigger2_properties_typeProperties_scope": {
+						"value": "[parameters('trigger2_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'pp2412_ArmTemplate_1')]"
+			]
+		}
+	]
+}

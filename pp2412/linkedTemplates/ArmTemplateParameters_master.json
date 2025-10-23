@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "pp2412"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"HttpServertostorage_password": {
+			"value": ""
+		},
+		"localfiles_password": {
+			"value": ""
+		},
+		"storage_accountKey": {
+			"value": ""
+		},
+		"urltostorage_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "piyushsql.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "piyushsql"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "piyush"
+		},
+		"HttpServertostorage_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/Piyush24121991/AZURE-DATA-ENGG-PROJECT-/"
+		},
+		"HttpServertostorage_properties_typeProperties_userName": {
+			"value": "Piyush24121991"
+		},
+		"localfiles_properties_typeProperties_host": {
+			"value": "C:\\Program Files\\data store"
+		},
+		"localfiles_properties_typeProperties_userId": {
+			"value": "Piyush Pawar"
+		},
+		"storage_properties_typeProperties_url": {
+			"value": "https://piyushstorage.dfs.core.windows.net/"
+		},
+		"urltostorage_properties_typeProperties_url": {
+			"value": "https://piyushstorage.dfs.core.windows.net/"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
