@@ -1,0 +1,17 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/gold/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

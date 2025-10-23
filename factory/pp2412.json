@@ -1,0 +1,9 @@
+{
+	"name": "pp2412",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "72fd11a3-2128-46b9-824b-cb0ffb47fd7a",
+		"tenantId": "a12f9ae7-6a02-4c15-959a-ea4e91d80431"
+	}
+}

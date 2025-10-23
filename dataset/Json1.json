@@ -1,0 +1,33 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "urltostorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "url.json",
+				"fileSystem": "perameter"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"p_rel_url": {
+					"type": "string"
+				},
+				"p_re_dir": {
+					"type": "string"
+				},
+				"p_re_file": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

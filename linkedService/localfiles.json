@@ -1,0 +1,17 @@
+{
+	"name": "localfiles",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Program Files\\data store",
+			"userId": "Piyush Pawar",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0MDA0NWFiZC05NzkxLTQ2NTctYmFhOC0yMjcxZGZjNWMyMWIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "localserverintegration",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

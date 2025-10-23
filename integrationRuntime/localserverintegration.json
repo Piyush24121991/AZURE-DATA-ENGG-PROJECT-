@@ -1,0 +1,6 @@
+{
+	"name": "localserverintegration",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
