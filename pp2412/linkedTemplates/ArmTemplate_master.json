@@ -67,10 +67,6 @@
 			"type": "string",
 			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
 		},
-		"trigger2_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -130,9 +126,6 @@
 					},
 					"urltostorage_properties_typeProperties_url": {
 						"value": "[parameters('urltostorage_properties_typeProperties_url')]"
-					},
-					"trigger1_properties_typeProperties_scope": {
-						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},
@@ -181,8 +174,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"trigger2_properties_typeProperties_scope": {
-						"value": "[parameters('trigger2_properties_typeProperties_scope')]"
+					"trigger1_properties_typeProperties_scope": {
+						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},

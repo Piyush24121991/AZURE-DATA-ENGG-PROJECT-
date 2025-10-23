@@ -66,10 +66,6 @@
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
-		},
-		"trigger2_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
 		}
 	},
 	"variables": {
@@ -1983,53 +1979,12 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/sheduld trigger')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Minute",
-						"interval": 1,
-						"startTime": "2025-10-22T08:30:00",
-						"endTime": "2025-10-23T08:30:00",
-						"timeZone": "India Standard Time"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"runtimeState": "Stopped",
-				"pipelines": [],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/gold/blobs/",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/trigger2')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -2043,7 +1998,7 @@
 				"typeProperties": {
 					"blobPathBeginsWith": "/gold/blobs/",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('trigger2_properties_typeProperties_scope')]",
+					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]

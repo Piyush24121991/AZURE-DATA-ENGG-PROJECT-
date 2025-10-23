@@ -49,9 +49,6 @@
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
-		},
-		"trigger2_properties_typeProperties_scope": {
-			"value": "/subscriptions/e00957da-ed9f-4d65-b512-fe38239a5dbe/resourceGroups/PIYUSHPROJECT/providers/Microsoft.Storage/storageAccounts/piyushstorage"
 		}
 	}
 }
