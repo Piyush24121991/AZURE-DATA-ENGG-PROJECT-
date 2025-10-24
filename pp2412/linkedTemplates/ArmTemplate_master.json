@@ -144,15 +144,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"localfiles_password": {
-						"value": "[parameters('localfiles_password')]"
-					},
-					"localfiles_properties_typeProperties_host": {
-						"value": "[parameters('localfiles_properties_typeProperties_host')]"
-					},
-					"localfiles_properties_typeProperties_userId": {
-						"value": "[parameters('localfiles_properties_typeProperties_userId')]"
 					}
 				}
 			},
@@ -173,6 +164,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"localfiles_password": {
+						"value": "[parameters('localfiles_password')]"
+					},
+					"localfiles_properties_typeProperties_host": {
+						"value": "[parameters('localfiles_properties_typeProperties_host')]"
+					},
+					"localfiles_properties_typeProperties_userId": {
+						"value": "[parameters('localfiles_properties_typeProperties_userId')]"
 					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
