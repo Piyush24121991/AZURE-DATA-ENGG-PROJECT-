@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "Downloads",
+			"host": "C:\\Users\\LENOVO\\Downloads",
 			"userId": "Piyush Pawar",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5OTM4M2RlZi0zYzMzLTQwZWMtOTNlMC1iMzRhNTdhNGUwOTkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5YTAzNjc3Yy0zNGNkLTQ1YzgtYmQ4MS1hM2QxMmIwOTZiZTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "localserverintegration",
