@@ -5,17 +5,9 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "AzureSqlTable3",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				},
 				{
-					"dataset": {
-						"referenceName": "AzureSqlTable4",
-						"type": "DatasetReference"
-					},
 					"name": "source2"
 				}
 			],
@@ -55,9 +47,7 @@
 				"          ModifiedDate as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source(output(",
 				"          SalesOrderID as integer,",
 				"          RevisionNumber as integer,",
@@ -83,9 +73,7 @@
 				"          ModifiedDate as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source2",
+				"     validateSchema: false) ~> source2",
 				"source1, source2 join(source1@CustomerID == source2@CustomerID,",
 				"     joinType:'inner',",
 				"     matchType:'exact',",

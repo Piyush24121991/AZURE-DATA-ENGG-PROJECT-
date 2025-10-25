@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "AzureSqlTable2",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -48,9 +44,7 @@
 				"          ModifiedDate as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source1 filter(Title=='Mr.') ~> filter1",
 				"filter1 sort(asc(FirstName, true)) ~> sort1",
 				"sort1 sink(allowSchemaDrift: true,",
