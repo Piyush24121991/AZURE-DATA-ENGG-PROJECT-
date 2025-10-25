@@ -7,17 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "pp2412"
 		},
-		"AzureSqlDatabase1_password": {
+		"AzureSqlDatabase2_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
 		},
 		"HttpServertostorage_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'HttpServertostorage'"
 		},
-		"localfiles_password": {
+		"onprem_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'localfiles'"
+			"metadata": "Secure string for 'password' of 'onprem'"
 		},
 		"storage_accountKey": {
 			"type": "secureString",
@@ -33,9 +33,21 @@
 		},
 		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "piyushsql"
+			"defaultValue": "@{linkedService().db}"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "@{linkedService().user}"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "piyushsql.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "piyushsql"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "piyush"
 		},
@@ -47,13 +59,13 @@
 			"type": "string",
 			"defaultValue": "Piyush24121991"
 		},
-		"localfiles_properties_typeProperties_host": {
+		"onprem_properties_typeProperties_host": {
 			"type": "string",
-			"defaultValue": "C:\\Program Files\\data store"
+			"defaultValue": "C:\\Users\\LENOVO\\Downloads"
 		},
-		"localfiles_properties_typeProperties_userId": {
+		"onprem_properties_typeProperties_userId": {
 			"type": "string",
-			"defaultValue": "Piyush Pawar"
+			"defaultValue": "LENOVO"
 		},
 		"storage_properties_typeProperties_url": {
 			"type": "string",
@@ -94,8 +106,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureSqlDatabase1_password": {
-						"value": "[parameters('AzureSqlDatabase1_password')]"
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
 					},
 					"HttpServertostorage_password": {
 						"value": "[parameters('HttpServertostorage_password')]"
@@ -114,6 +126,15 @@
 					},
 					"AzureSqlDatabase1_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
 					},
 					"HttpServertostorage_properties_typeProperties_url": {
 						"value": "[parameters('HttpServertostorage_properties_typeProperties_url')]"
@@ -165,14 +186,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"localfiles_password": {
-						"value": "[parameters('localfiles_password')]"
+					"onprem_password": {
+						"value": "[parameters('onprem_password')]"
 					},
-					"localfiles_properties_typeProperties_host": {
-						"value": "[parameters('localfiles_properties_typeProperties_host')]"
+					"onprem_properties_typeProperties_host": {
+						"value": "[parameters('onprem_properties_typeProperties_host')]"
 					},
-					"localfiles_properties_typeProperties_userId": {
-						"value": "[parameters('localfiles_properties_typeProperties_userId')]"
+					"onprem_properties_typeProperties_userId": {
+						"value": "[parameters('onprem_properties_typeProperties_userId')]"
 					}
 				}
 			},
