@@ -29,6 +29,16 @@
 							}
 						}
 					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "urltostorage",
+							"type": "LinkedServiceReference"
+						},
+						"path": {
+							"value": "@pipeline().parameters.container",
+							"type": "Expression"
+						}
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
