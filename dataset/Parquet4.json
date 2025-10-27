@@ -1,0 +1,19 @@
+{
+	"name": "Parquet4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServertostorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "refs/heads/main/cuustomers.json"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
