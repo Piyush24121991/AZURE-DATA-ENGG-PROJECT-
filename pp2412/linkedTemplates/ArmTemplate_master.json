@@ -205,15 +205,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"onprem_password": {
-						"value": "[parameters('onprem_password')]"
-					},
-					"onprem_properties_typeProperties_host": {
-						"value": "[parameters('onprem_properties_typeProperties_host')]"
-					},
-					"onprem_properties_typeProperties_userId": {
-						"value": "[parameters('onprem_properties_typeProperties_userId')]"
 					}
 				}
 			},
@@ -234,6 +225,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"onprem_password": {
+						"value": "[parameters('onprem_password')]"
+					},
+					"onprem_properties_typeProperties_host": {
+						"value": "[parameters('onprem_properties_typeProperties_host')]"
+					},
+					"onprem_properties_typeProperties_userId": {
+						"value": "[parameters('onprem_properties_typeProperties_userId')]"
 					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
